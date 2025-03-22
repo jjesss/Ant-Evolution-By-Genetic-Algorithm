@@ -1,6 +1,6 @@
 % The function simulate_ant outputs the overall fitness value and trail the
 % ant takes
-% It takes the genetic encoding for an an( string_controller containing 30
+% It takes the genetic encoding for an ant ( string_controller containing 30
 % digits) and the file containing the enviroment
 
 % In this project we use Genetic Algorithm to try and build a better ant through evolution
