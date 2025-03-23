@@ -1,5 +1,4 @@
 % this is simulator for ant
-% you do not need to change this file, but you need to use this function in your GA code
 
 function [fitness, trail] = simulate_ant(world_grid, string_controller)
 
