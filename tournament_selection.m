@@ -18,9 +18,9 @@ function [parent_chromosome_1, parent_chromosome_2] = tournament_selection(paren
                         
                     % check a and b arent the same and if it is,
                     % choose another b
-                        while(a == b)
-                            b = pool(randi(numel(pool))) ;
-                        end
+                        % while(a == b)
+                            % b = pool(randi(numel(pool))) ;
+                        % end
                     % take the fittest chromosome from both groups
                     
                     if population(a, 31) > population(b, 31)
