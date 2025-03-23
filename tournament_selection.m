@@ -29,6 +29,6 @@ function [parent_chromosome_1, parent_chromosome_2] = tournament_selection(paren
                                 choice(i) = b;
                     end
                 end
-                parent_chromosome_1 = population(choice(1),1:30);
-                parent_chromosome_2 = population(choice(2),1:30);
+                parent_chromosome_1 = population(choice(1,1),1:30);
+                parent_chromosome_2 = population(choice(1,2),1:30);
 end
