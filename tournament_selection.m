@@ -4,7 +4,7 @@
             % (with/without replacement)
 function [parent_chromosome_1, parent_chromosome_2] = tournament_selection(parent_chromosome_1, parent_chromosome_2, population, population_size)
                 choice = zeros(1,2);
-                pool = 1:population_size;
+                % pool = 1:population_size;
                 % 2 groups so we can have two surviving chromosomes
                 for i= 1:2
                     % pick at random one chromosome number
