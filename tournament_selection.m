@@ -8,21 +8,27 @@ function [parent_chromosome_1, parent_chromosome_2] = tournament_selection(paren
                 % 2 groups so we can have two surviving chromosomes
                 for i= 1:2
                     % pick at random one chromosome number
-                        a = pool(randi(numel(pool)));
                     % pick at random another chromosome
                     % (without replacement of a)
-                        b = pool(randi(numel(pool)));
+                        % a = pool(randi(numel(pool)));
+                        % b = pool(randi(numel(pool)));                                            
+                        indices = randperm(population_size, 2);  
+                        a = indices(1);
+                        b = indices(2);
+                        
                     % check a and b arent the same and if it is,
                     % choose another b
                         while(a == b)
                             b = pool(randi(numel(pool))) ;
                         end
                     % take the fittest chromosome from both groups
-                    if(max(population(a,31),population(b,31)) == population(a,31))
-                            choice(1,i) = a;
+                    
+                    if population(a, 31) > population(b, 31)
+                                choice(i) = a;
                     else
-                            choice(1,i) = b;
+                                choice(i) = b;
                     end
                 end
-                parent_chromosome_1 = population(choice(1,1),1:30);
-                parent_chromosome_2 = population(choice(1,2),1:30);
+                parent_chromosome_1 = population(choice(1),1:30);
+                parent_chromosome_2 = population(choice(2),1:30);
+end
