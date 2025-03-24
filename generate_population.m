@@ -18,7 +18,7 @@ function population = generate_population(ori,population_size)
         end
     
  %{
-    Generating initial population, different way:
+    Generating initial population, in a different way:
         for n = 1:population_size
             chromosome = zeros(10, 3);
             for i = 1:10
