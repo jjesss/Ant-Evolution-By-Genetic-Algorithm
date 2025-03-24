@@ -17,9 +17,7 @@ function [parent_chromosome_1, parent_chromosome_2] = k_point_crossover(parent_c
                     parent_chromosome_2(cross_point:30) = prev1(cross_point:30);
         %% Two Point Crossover
             elseif value > 0.3
-            %points = 2;
                 cross_point = randi([1,30],1,2);
-                    % dont pick the same points
                     while cross_point(1)==cross_point(2)
                         cross_point = randi([1,30],2,1);
                     end
