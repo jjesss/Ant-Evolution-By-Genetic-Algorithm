@@ -89,11 +89,11 @@ for iter=1:Ngen  % Each generation generates a new population until max produced
                  % the same fitness value
         % create a 1 x population size vector of fitness values
         current_fitness = reshape(population(1:population_size,31)',1,[]);
-            % for every 50 iterations
+            % for every n iterations
             if mod(iter,N) == 0 
                 % calc average fitness of population:
                 current_mean = mean(current_fitness);
-                    % check if the change for every 50 is less than our threshold             
+                    % check if the change for every n is less than our threshold             
                     if abs(last_mean - current_mean)<= 10
                         % set the amount of generations it checked
                         Ngen = iter-1;
