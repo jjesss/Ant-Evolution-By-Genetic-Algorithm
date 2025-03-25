@@ -120,7 +120,7 @@ for iter=1:Ngen  % Each generation generates a new population until max produced
                 % sorts the population based on the fitness column
                 % population = sortrows(population,31);
                     population_new = zeros(population_size,30);
-                    % keep best 10%:
+                    % keep best 20%:
                     population_new(1:(0.2*population_size),1:30) = population(population_size-(0.2*population_size-1):population_size,1:30);
                     population_new_num = (0.2*population_size);
                 % I chose to keep only the best 2 chromosomes:
